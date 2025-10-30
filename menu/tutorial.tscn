@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqiapsammjq0p"]
+
+[ext_resource type="Script" uid="uid://dulul1g343u2u" path="res://menu/tutorial.gd" id="1_312h1"]
+[ext_resource type="Texture2D" uid="uid://yeyie6r2cnds" path="res://art/citrus.svg" id="2_hwbri"]
+[ext_resource type="Texture2D" uid="uid://dwygt1jelbw3c" path="res://art/background.svg" id="2_w1trr"]
+[ext_resource type="Texture2D" uid="uid://bgruvffaefe8r" path="res://art/bottle.svg" id="3_jkv5b"]
+[ext_resource type="Texture2D" uid="uid://1srriqgpcpsh" path="res://art/citrusPress.svg" id="5_87aea"]
+[ext_resource type="Shader" uid="uid://dvviuwtiycssu" path="res://objects/scenes/bottle.gdshader" id="6_tjbtx"]
+[ext_resource type="Texture2D" uid="uid://byq42kwopijxb" path="res://art/player/whole.svg" id="7_up4ib"]
+[ext_resource type="Texture2D" uid="uid://whq5s2u74aws" path="res://menu/pfeil.svg" id="8_jr6dt"]
+[ext_resource type="Theme" uid="uid://cxd6p5gdqevd3" path="res://art/ui/standard.tres" id="9_3hviu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vsu7d"]
+shader = ExtResource("6_tjbtx")
+shader_parameter/value = 0.5
+
+[node name="Control" type="Node2D"]
+script = ExtResource("1_312h1")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(740, 501)
+texture = ExtResource("2_w1trr")
+
+[node name="Bottle" type="Sprite2D" parent="."]
+position = Vector2(127, 494)
+texture = ExtResource("3_jkv5b")
+
+[node name="Citrus" type="Sprite2D" parent="."]
+position = Vector2(128, 306)
+texture = ExtResource("2_hwbri")
+
+[node name="CitrusPress" type="Sprite2D" parent="."]
+position = Vector2(514.5, 375.5)
+texture = ExtResource("5_87aea")
+
+[node name="Bottle2" type="Sprite2D" parent="."]
+position = Vector2(512.5, 476.5)
+texture = ExtResource("3_jkv5b")
+
+[node name="Bottle4" type="Sprite2D" parent="."]
+modulate = Color(0.329412, 0.584314, 0.654902, 1)
+material = SubResource("ShaderMaterial_vsu7d")
+position = Vector2(512.5, 476.5)
+texture = ExtResource("3_jkv5b")
+
+[node name="Bottle5" type="Sprite2D" parent="."]
+position = Vector2(1278, 327)
+rotation = -1.57079
+texture = ExtResource("3_jkv5b")
+
+[node name="Bottle6" type="Sprite2D" parent="."]
+modulate = Color(0.329412, 0.584314, 0.654902, 1)
+material = SubResource("ShaderMaterial_vsu7d")
+position = Vector2(1278, 327)
+rotation = -1.57079
+texture = ExtResource("3_jkv5b")
+
+[node name="Citrus2" type="Sprite2D" parent="."]
+position = Vector2(514.5, 330.5)
+texture = ExtResource("2_hwbri")
+
+[node name="Bottle3" type="Sprite2D" parent="."]
+modulate = Color(0.329412, 0.584314, 0.654902, 1)
+position = Vector2(866, 399)
+texture = ExtResource("3_jkv5b")
+
+[node name="Whole" type="Sprite2D" parent="."]
+position = Vector2(1180.5, 569.5)
+texture = ExtResource("7_up4ib")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.33, 1.33)
+
+[node name="Pfeil" type="Sprite2D" parent="."]
+position = Vector2(306, 400)
+texture = ExtResource("8_jr6dt")
+
+[node name="Pfeil2" type="Sprite2D" parent="."]
+position = Vector2(704, 401)
+texture = ExtResource("8_jr6dt")
+
+[node name="Pfeil3" type="Sprite2D" parent="."]
+position = Vector2(1014, 400)
+texture = ExtResource("8_jr6dt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 95.0
+offset_right = 1115.0
+offset_bottom = 210.0
+theme = ExtResource("9_3hviu")
+theme_override_font_sizes/font_size = 86
+text = "Stay Hydrated!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 699.0
+offset_right = 926.0
+offset_bottom = 814.0
+theme = ExtResource("9_3hviu")
+theme_override_font_sizes/font_size = 51
+text = "keep the weight down"
+
+[node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = 1035.0
+offset_top = 29.0
+offset_right = 1758.0
+offset_bottom = 144.0
+theme = ExtResource("9_3hviu")
+theme_override_font_sizes/font_size = 51
+text = "click!"

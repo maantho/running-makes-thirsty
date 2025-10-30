@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2v0u5jikhhbp"]
+
+[ext_resource type="Script" uid="uid://rgibqxnw3yww" path="res://objects/bottle.gd" id="1_wlfj6"]
+[ext_resource type="Texture2D" uid="uid://bgruvffaefe8r" path="res://art/bottle.svg" id="2_rfqyb"]
+[ext_resource type="Shader" uid="uid://dvviuwtiycssu" path="res://objects/scenes/bottle.gdshader" id="3_1gu2c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dtel3"]
+resource_local_to_scene = true
+shader = ExtResource("3_1gu2c")
+shader_parameter/value = 0.115
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjrpe"]
+radius = 27.0
+height = 127.0
+
+[node name="Bottle" type="RigidBody2D"]
+script = ExtResource("1_wlfj6")
+filled_mat = SubResource("ShaderMaterial_dtel3")
+water = 100.0
+
+[node name="Bottle" type="Sprite2D" parent="."]
+position = Vector2(0, 61.5)
+texture = ExtResource("2_rfqyb")
+
+[node name="Bottle2" type="Sprite2D" parent="."]
+modulate = Color(0.341201, 0.632049, 0.814874, 1)
+material = SubResource("ShaderMaterial_dtel3")
+position = Vector2(0, 61.5)
+texture = ExtResource("2_rfqyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 62.5)
+shape = SubResource("CapsuleShape2D_hjrpe")

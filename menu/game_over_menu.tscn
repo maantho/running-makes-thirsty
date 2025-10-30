@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://utpgw6nh5yrf"]
+
+[ext_resource type="Texture2D" uid="uid://d27a082nhap70" path="res://menu/title.svg" id="1_0suql"]
+[ext_resource type="Theme" uid="uid://cxd6p5gdqevd3" path="res://art/ui/standard.tres" id="2_0y0cx"]
+[ext_resource type="Script" uid="uid://3clf117rvn5p" path="res://menu/game_over_menu.gd" id="2_7oefn"]
+
+[node name="GameOverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0y0cx")
+script = ExtResource("2_7oefn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -81.5
+offset_right = 174.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0suql")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 1369.0
+offset_top = 280.0
+offset_right = 1609.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 100
+text = "500m
+"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 868.0
+offset_right = 1620.0
+offset_bottom = 1014.0
+text = "Back
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 561.0
+offset_right = 1484.0
+offset_bottom = 694.0
+theme = ExtResource("2_0y0cx")
+theme_override_colors/font_color = Color(0.372549, 0.737255, 0.827451, 1)
+theme_override_font_sizes/font_size = 100
+text = "Game Over"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

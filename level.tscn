@@ -1,0 +1,916 @@
+[gd_scene load_steps=35 format=3 uid="uid://dftolfst8olv5"]
+
+[ext_resource type="Script" uid="uid://3hwm7j8jo4yu" path="res://Level.gd" id="1_4rtpk"]
+[ext_resource type="Texture2D" uid="uid://dwygt1jelbw3c" path="res://art/background.svg" id="2_c305v"]
+[ext_resource type="Texture2D" uid="uid://ccjo2xbt7pnfa" path="res://art/bag.svg" id="4_lp34v"]
+[ext_resource type="Script" uid="uid://csviey0785ogr" path="res://Bag.gd" id="4_upr7b"]
+[ext_resource type="Texture2D" uid="uid://crqx4b1skjyn" path="res://art/player/background_HandBack.svg" id="5_tf2xf"]
+[ext_resource type="Texture2D" uid="uid://cy1ve8p040hcy" path="res://art/player/background_LowerArmBack.svg" id="6_8eqhp"]
+[ext_resource type="Texture2D" uid="uid://ddron15gtruji" path="res://art/player/background_UpperArmBack.svg" id="7_18ev8"]
+[ext_resource type="Texture2D" uid="uid://cwu3ankuvwfn" path="res://art/player/background_LowerLegBack.svg" id="8_j2hxb"]
+[ext_resource type="Script" uid="uid://dt1ikyj16sygq" path="res://mouth.gd" id="9_5mflg"]
+[ext_resource type="Texture2D" uid="uid://cvpmllsvrcdyq" path="res://art/player/background_Shoe.svg" id="9_qvdh4"]
+[ext_resource type="Texture2D" uid="uid://cl1ojkg3fg7v" path="res://art/player/background_UpperLegBack.svg" id="10_kg2na"]
+[ext_resource type="Texture2D" uid="uid://ib4cyq0425ne" path="res://art/player/background_Neck.svg" id="11_1tcq6"]
+[ext_resource type="Texture2D" uid="uid://ba4jv8jonubym" path="res://art/player/background_Head.svg" id="12_jhhru"]
+[ext_resource type="Texture2D" uid="uid://ol4rugp55hbn" path="res://art/player/background_UpperBody.svg" id="13_qx0ex"]
+[ext_resource type="Texture2D" uid="uid://c1tcdd1mrm1rj" path="res://art/player/background_UpperLeg.svg" id="14_g1qc1"]
+[ext_resource type="Texture2D" uid="uid://cykom6ay8hf1r" path="res://art/player/background_LowerLeg.svg" id="15_djpvb"]
+[ext_resource type="Texture2D" uid="uid://kn7n31wheiul" path="res://art/player/background_Pants.svg" id="16_w2l8s"]
+[ext_resource type="Texture2D" uid="uid://bivsdjlb8xbad" path="res://art/player/background_UpperArm.svg" id="17_4kk50"]
+[ext_resource type="Texture2D" uid="uid://cf0g2dwwy8w0m" path="res://art/player/background_LowerArm.svg" id="18_ftpl0"]
+[ext_resource type="Texture2D" uid="uid://dg4l0y078r81h" path="res://art/player/background_Hand.svg" id="19_7jn71"]
+[ext_resource type="Script" uid="uid://bleoo7spi5a6s" path="res://arangements/spawner.gd" id="21_qvgfd"]
+[ext_resource type="PackedScene" uid="uid://dooiwtqtf2h04" path="res://arangements/tree.tscn" id="22_gm8xq"]
+[ext_resource type="PackedScene" uid="uid://wxs5i0xsbo2d" path="res://arangements/alk_house.tscn" id="23_5ns1m"]
+[ext_resource type="PackedScene" uid="uid://dcpdgxkxxemnt" path="res://objects/scenes/lemon.tscn" id="23_8n1f8"]
+[ext_resource type="Theme" uid="uid://cxd6p5gdqevd3" path="res://art/ui/standard.tres" id="23_uh75a"]
+[ext_resource type="PackedScene" uid="uid://52vgb4xqmnj7" path="res://arangements/normal_house.tscn" id="24_7me1w"]
+[ext_resource type="Texture2D" uid="uid://bq8vhrs0aeu5e" path="res://art/ui/background_Background.svg" id="24_t0v5l"]
+[ext_resource type="Texture2D" uid="uid://cdbf0p160f1d0" path="res://art/ui/background_HudrationProgress.svg" id="25_vuvua"]
+[ext_resource type="Texture2D" uid="uid://c8js180x8g680" path="res://art/ui/background_RunProgress.svg" id="26_uxbmn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68mcf"]
+size = Vector2(3e+06, 429.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sdgf"]
+size = Vector2(73.9989, 80.9991)
+
+[sub_resource type="Animation" id="Animation_b1p6n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("polygons/Pants/UpperBody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("polygons/Pants/UpperBody/Neck:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("polygons/Pants/UpperBody/Neck/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("polygons/Pants/UpperLegFront:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("polygons/Pants/UpperLegFront/LowerLegFront:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("polygons/Pants/UpperLegFront/LowerLegFront/ShoeFront:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("polygons/Pants:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -18.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("polygons/Pants/UpperLegBack:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("polygons/Pants/UpperLegBack/LowerLegBack:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("polygons/Pants/UpperLegBack/LowerLegBack/ShoeBack:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("polygons/Pants/UpperBody/UpperArmBack:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("polygons/Pants/UpperBody/UpperArmBack/LowerArmBack:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("polygons/Pants/UpperBody/UpperArmFront:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.13216]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("polygons/Pants/UpperBody/UpperArmBack/LowerArmBack/HandBack:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.908782]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("polygons/Pants/UpperBody/UpperArmFront/LowerArmFront:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("polygons/Pants/UpperBody/UpperArmFront/LowerArmFront/HandFront:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../RemoteTransform2D:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.619695]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../RemoteTransform2D:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(579.201, 457.854)]
+}
+
+[sub_resource type="Animation" id="Animation_ivvp2"]
+resource_name = "run"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("polygons/Pants/UpperBody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.619695, 0.409065, 0.571681, 0.714775, 0.660333, 0.686074, 0.678535, 0.409065, 0.571681, 0.714775, 0.660333, 0.686074]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("polygons/Pants/UpperBody/Neck:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2, 2.5, 3, 3.5, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.47479, -0.534853, -0.565912, -0.411244, -0.52384, -0.529151, -0.534853, -0.565912, -0.411244, -0.52384]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("polygons/Pants/UpperBody/Neck/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.0938579, 0.185322, 0.0209789, -0.106529, -0.13488, -0.123962, -0.100239, 0.185322, 0.0209789, -0.106529, -0.13488, -0.123962]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("polygons/Pants/UpperLegFront:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.615572, -1.16627, -0.449629, 0.233262, 0.706474, 0.732815, 0.700858, 0.273895, -0.741716, -1.21714, -1.34992, -1.43004]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("polygons/Pants/UpperLegFront/LowerLegFront:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.0885747, 1.4803, 0.815188, 0.388513, -0.0665111, 0.510672, 1.41043, 1.74565, 1.8232, 1.5301, 1.11466, 0.938166]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("polygons/Pants/UpperLegFront/LowerLegFront/ShoeFront:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.131592, -0.328098, -0.398249, -0.130593, 0.706481, 0.699103, 0.074743, 0.655662, 0.900683, 0.505633, 0.169841, -0.18276]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("polygons/Pants:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 8.5), Vector2(0, 65.5), Vector2(0, 7.5), Vector2(0, -2.5), Vector2(0, -2.5), Vector2(0, -31.5), Vector2(0, 7.5), Vector2(0, 65.5), Vector2(0, 7.5), Vector2(0, -2.5), Vector2(0, -2.5), Vector2(0, -31.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("polygons/Pants/UpperLegBack:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.606461, 0.273895, -0.741716, -1.21714, -1.34992, -1.43004, -0.673235, -1.16627, -0.449629, 0.233262, 0.706474, 0.732815]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("polygons/Pants/UpperLegBack/LowerLegBack:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.62674, 1.74565, 1.8232, 1.5301, 1.11466, 0.938166, 0.0112349, 1.4803, 0.815188, 0.388513, -0.0665111, 0.510672]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("polygons/Pants/UpperLegBack/LowerLegBack/ShoeBack:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.17937, 0.655662, 0.900683, 0.505633, 0.169841, -0.18276, -0.141884, -0.328098, -0.398249, -0.130593, 0.706481, 0.699103]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("polygons/Pants/UpperBody/UpperArmBack:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.00618, -0.83142, -0.717554, 0.00820225, 0.274198, 0.592724, 0.817223, 0.672401, -0.0494431, -0.523741, -0.679847, -0.903138]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("polygons/Pants/UpperBody/UpperArmBack/LowerArmBack:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.25327, -1.03147, -0.0833367, -0.29071, -0.683067, -0.422898, -0.564561, -0.113532, -0.0647694, -0.773903, -1.06726, -1.16671]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("polygons/Pants/UpperBody/UpperArmFront:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.01025, 0.672401, -0.0494431, -0.523741, -0.679847, -0.903138, -1.1124, -0.83142, -0.717554, 0.00820225, 0.274198, 0.592724]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("polygons/Pants/UpperBody/UpperArmBack/LowerArmBack/HandBack:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.926318, -0.923036, -1.03983, -0.752066, -0.439489, 0.558853, 0.328489, 0.451277, 0.163998, -0.519266, -0.560942]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("polygons/Pants/UpperBody/UpperArmFront/LowerArmFront:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.489224, -0.113532, -0.0647694, -0.773903, -1.06726, -1.16671, -1.28145, -1.03147, -0.0833367, -0.29071, -0.683067, -0.422898]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("polygons/Pants/UpperBody/UpperArmFront/LowerArmFront/HandFront:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.500102, 0.328489, 0.451277, 0.163998, -0.519266, -0.560942, -0.968519, -0.923036, -1.03983, -0.752066, -0.439489]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../RemoteTransform2D:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.733333, 2.73333, 3.73333, 5.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(524, 538), Vector2(537, 491), Vector2(524, 538), Vector2(537, 491)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../RemoteTransform2D:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.733333, 2.73333, 3.73333, 5.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.681598, 0.827364, 0.681598, 0.827364]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s4g2c"]
+_data = {
+&"RESET": SubResource("Animation_b1p6n"),
+&"run": SubResource("Animation_ivvp2")
+}
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_4rtpk")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1.5e+06, 1165)
+shape = SubResource("RectangleShape2D_68mcf")
+
+[node name="Player" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Mouth" type="Area2D" parent="Player"]
+unique_name_in_owner = true
+position = Vector2(728.201, 401.705)
+rotation = -1.57185
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("9_5mflg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Mouth"]
+position = Vector2(5.6889, 14.3074)
+shape = SubResource("RectangleShape2D_4sdgf")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player/Mouth"]
+update_scale = false
+
+[node name="BagColl" type="AnimatableBody2D" parent="Player"]
+z_index = -5
+z_as_relative = false
+position = Vector2(579.201, 457.854)
+rotation = 0.619695
+scale = Vector2(1.14786, 1.14786)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BagCollision" type="CollisionPolygon2D" parent="Player/BagColl"]
+rotation = -0.368374
+polygon = PackedVector2Array(-21, -195, -94, -109, -127, -60, -145, -4, -144, 44, -133, 86, -103, 129, -54, 161, 3, 174, 59, 169, 103, 148, 134, 112, 153, 57, 153, 5, 145, -40, 129, -83, 106, -148, 107, -167, 220.331, -188.567, 261.307, -38.2783, 225.798, 155.326, 127.681, 242.588, 42.2705, 270.319, -66.2954, 256.428, -175.245, 197.565, -246.551, 94.4011, -234.299, -55.886, -193.103, -140.839, -85.0612, -263.49)
+
+[node name="Bag" type="Area2D" parent="Player/BagColl"]
+unique_name_in_owner = true
+rotation = -0.368374
+collision_layer = 2
+collision_mask = 2
+linear_damp = 100.0
+angular_damp = 100.0
+script = ExtResource("4_upr7b")
+
+[node name="Bag" type="Sprite2D" parent="Player/BagColl/Bag"]
+texture = ExtResource("4_lp34v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/BagColl/Bag"]
+polygon = PackedVector2Array(-28, -196, 112, -165, 114, -136, 145, -63, 160, 11, 157, 78, 128, 132, 84, 169, 5, 186, -67, 171, -118, 130, -151, 81, -158, 24, -147, -40, -121, -85, -93, -121, -62, -155)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, 8)
+anchor_mode = 0
+zoom = Vector2(1.08, 1.08)
+
+[node name="Background" type="Sprite2D" parent="Player/Camera2D"]
+z_index = -1000
+texture = ExtResource("2_c305v")
+centered = false
+
+[node name="PlayerGraphics" type="Node2D" parent="Player"]
+z_index = 100
+position = Vector2(693, 642.5)
+
+[node name="polygons" type="Node2D" parent="Player/PlayerGraphics"]
+
+[node name="Pants" type="Sprite2D" parent="Player/PlayerGraphics/polygons"]
+position = Vector2(0, -18.5)
+texture = ExtResource("16_w2l8s")
+
+[node name="UpperBody" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants"]
+z_index = -10
+position = Vector2(8, -35)
+
+[node name="UpperBody" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody"]
+position = Vector2(-13, -72)
+texture = ExtResource("13_qx0ex")
+
+[node name="Neck" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody"]
+z_index = -1
+position = Vector2(-14, -160)
+
+[node name="Neck" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/Neck"]
+position = Vector2(2, -13)
+texture = ExtResource("11_1tcq6")
+
+[node name="Head" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/Neck"]
+position = Vector2(9, -27)
+
+[node name="BackgroundHead" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/Neck/Head"]
+position = Vector2(4, -28)
+texture = ExtResource("12_jhhru")
+
+[node name="MouthTransform" type="RemoteTransform2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/Neck/Head"]
+position = Vector2(32.2006, -0.294983)
+rotation = -1.57185
+remote_path = NodePath("../../../../../../../Mouth")
+
+[node name="UpperArmBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody"]
+z_index = -10
+z_as_relative = false
+position = Vector2(-22, -137)
+
+[node name="UpperArmBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmBack"]
+position = Vector2(-2, 42)
+texture = ExtResource("7_18ev8")
+
+[node name="LowerArmBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmBack"]
+position = Vector2(-8, 95)
+
+[node name="BackgroundLowerArmBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmBack/LowerArmBack"]
+position = Vector2(8, 39)
+texture = ExtResource("6_8eqhp")
+
+[node name="HandBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmBack/LowerArmBack"]
+position = Vector2(26, 96)
+rotation = -0.908782
+
+[node name="HandBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmBack/LowerArmBack/HandBack"]
+position = Vector2(4, 11)
+texture = ExtResource("5_tf2xf")
+
+[node name="UpperArmFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody"]
+z_index = 20
+position = Vector2(-22, -137)
+rotation = 1.13216
+
+[node name="BackgroundUpperArm" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmFront"]
+position = Vector2(-2, 41)
+texture = ExtResource("17_4kk50")
+
+[node name="LowerArmFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmFront"]
+position = Vector2(-8, 95)
+
+[node name="BackgroundLowerArm" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmFront/LowerArmFront"]
+position = Vector2(7, 39)
+texture = ExtResource("18_ftpl0")
+
+[node name="HandFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmFront/LowerArmFront"]
+position = Vector2(26, 96)
+
+[node name="BackgroundHand" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperBody/UpperArmFront/LowerArmFront/HandFront"]
+position = Vector2(4, 10)
+texture = ExtResource("19_7jn71")
+
+[node name="UpperLegBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants"]
+z_index = -10
+z_as_relative = false
+position = Vector2(3, 32)
+
+[node name="BackgroundUpperLegBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegBack"]
+position = Vector2(2, 53)
+texture = ExtResource("10_kg2na")
+
+[node name="LowerLegBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegBack"]
+position = Vector2(-6, 121)
+
+[node name="BackgroundLowerLegBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegBack/LowerLegBack"]
+position = Vector2(-11, 70)
+texture = ExtResource("8_j2hxb")
+
+[node name="ShoeBack" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegBack/LowerLegBack"]
+position = Vector2(-21, 142)
+
+[node name="BackgroundShoeBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegBack/LowerLegBack/ShoeBack"]
+position = Vector2(24, 13)
+texture = ExtResource("9_qvdh4")
+
+[node name="UpperLegFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants"]
+z_index = -5
+position = Vector2(3, 32)
+
+[node name="BackgroundUpperLegBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegFront"]
+position = Vector2(2, 53)
+texture = ExtResource("14_g1qc1")
+
+[node name="LowerLegFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegFront"]
+position = Vector2(-6, 121)
+
+[node name="BackgroundLowerLegBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegFront/LowerLegFront"]
+position = Vector2(-11, 70)
+texture = ExtResource("15_djpvb")
+
+[node name="ShoeFront" type="Node2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegFront/LowerLegFront"]
+position = Vector2(-21, 142)
+
+[node name="BackgroundShoeBack" type="Sprite2D" parent="Player/PlayerGraphics/polygons/Pants/UpperLegFront/LowerLegFront/ShoeFront"]
+position = Vector2(24, 13)
+texture = ExtResource("9_qvdh4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/PlayerGraphics"]
+libraries = {
+&"": SubResource("AnimationLibrary_s4g2c")
+}
+autoplay = "run"
+speed_scale = 7.0
+
+[node name="TreeSpawner" type="Marker2D" parent="Player"]
+position = Vector2(2054, 779)
+gizmo_extents = 73.1
+script = ExtResource("21_qvgfd")
+first_pos = 20.0
+distance = 50.0
+scene = ExtResource("22_gm8xq")
+
+[node name="Lemon Spawner" type="Marker2D" parent="Player"]
+position = Vector2(2054, 779)
+gizmo_extents = 73.1
+script = ExtResource("21_qvgfd")
+first_pos = 30.0
+distance = 25.0
+scene = ExtResource("23_8n1f8")
+
+[node name="AlkHouseSPawner" type="Marker2D" parent="Player"]
+position = Vector2(2054, 779)
+gizmo_extents = 73.1
+script = ExtResource("21_qvgfd")
+first_pos = 40.0
+distance = 100.0
+scene = ExtResource("23_5ns1m")
+
+[node name="NormalHouseSpawner" type="Marker2D" parent="Player"]
+position = Vector2(2054, 779)
+gizmo_extents = 73.1
+script = ExtResource("21_qvgfd")
+first_pos = 130.0
+distance = 150.0
+scene = ExtResource("24_7me1w")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(579.201, 457.854)
+rotation = 0.619695
+remote_path = NodePath("../BagColl")
+update_scale = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("23_uh75a")
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 179.0
+grow_horizontal = 2
+texture = ExtResource("24_t0v5l")
+
+[node name="Hydration" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 25.0
+offset_right = 254.0
+offset_bottom = 78.0
+text = "Hydration"
+
+[node name="0m" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 25.0
+offset_right = 556.0
+offset_bottom = 78.0
+text = "0m"
+
+[node name="MilestoneLabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 25.0
+offset_right = 1480.0
+offset_bottom = 78.0
+text = "3000m"
+horizontal_alignment = 2
+
+[node name="HydrationProgress" type="TextureProgressBar" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 39.0
+offset_top = 86.0
+offset_right = 252.0
+offset_bottom = 154.0
+max_value = 500.0
+step = 0.1
+value = 100.0
+texture_under = ExtResource("25_vuvua")
+texture_progress = ExtResource("25_vuvua")
+tint_progress = Color(0.372549, 0.737255, 0.827451, 1)
+
+[node name="LevelProgress" type="TextureProgressBar" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 340.0
+offset_top = 86.0
+offset_right = 1480.0
+offset_bottom = 148.0
+max_value = 10000.0
+step = 0.01
+value = 100.0
+allow_greater = true
+texture_under = ExtResource("26_uxbmn")
+texture_progress = ExtResource("26_uxbmn")
+tint_progress = Color(1, 0.8, 0, 1)
+
+[node name="jo" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -367.0
+offset_top = 105.0
+offset_right = -151.0
+offset_bottom = 158.0
+grow_horizontal = 0
+text = "=Speed:"
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_top = 105.0
+offset_right = -22.0
+offset_bottom = 158.0
+grow_horizontal = 0
+text = "5m/s"
+horizontal_alignment = 2
+
+[node name="jo2" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -367.0
+offset_top = 77.0
+offset_right = -151.0
+offset_bottom = 130.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "+Sugar:
+"
+
+[node name="SugarLabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_top = 77.0
+offset_right = -22.0
+offset_bottom = 130.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "50g
+"
+horizontal_alignment = 2
+
+[node name="jo3" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -367.0
+offset_top = 46.0
+offset_right = -151.0
+offset_bottom = 99.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "-Drunkenness:
+"
+
+[node name="DrunkenessLabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_top = 46.0
+offset_right = -22.0
+offset_bottom = 99.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "50g
+"
+horizontal_alignment = 2
+
+[node name="jo4" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -367.0
+offset_top = 16.0
+offset_right = -151.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "-Weight:
+"
+
+[node name="Weightlabel" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_top = 16.0
+offset_right = -22.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 23
+text = "50g
+"
+horizontal_alignment = 2

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcpdgxkxxemnt"]
+
+[ext_resource type="Script" uid="uid://ka5bilfs88uh" path="res://objects/fruit.gd" id="1_4p6y0"]
+[ext_resource type="Texture2D" uid="uid://yeyie6r2cnds" path="res://art/citrus.svg" id="2_xnv5c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwskh"]
+radius = 43.566
+
+[node name="Lemon" type="RigidBody2D"]
+mass = 0.15
+script = ExtResource("1_4p6y0")
+water = 150.0
+sugar = 30.0
+base_weight = 0.0
+
+[node name="Citrus" type="Sprite2D" parent="."]
+texture = ExtResource("2_xnv5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bwskh")

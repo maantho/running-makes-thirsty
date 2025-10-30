@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://52vgb4xqmnj7"]
+
+[ext_resource type="Texture2D" uid="uid://d1esmafdmttxq" path="res://art/house.svg" id="1_bwkih"]
+[ext_resource type="PackedScene" uid="uid://b65yb5y2ce7kj" path="res://objects/scenes/miexer.tscn" id="2_h8lxt"]
+[ext_resource type="PackedScene" uid="uid://7yph1pddbqi4" path="res://objects/scenes/apple.tscn" id="3_g4u4w"]
+[ext_resource type="PackedScene" uid="uid://c2v0u5jikhhbp" path="res://objects/scenes/bottle.tscn" id="4_gfu61"]
+[ext_resource type="Shader" uid="uid://dvviuwtiycssu" path="res://objects/scenes/bottle.gdshader" id="5_2tchf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k1les"]
+resource_local_to_scene = true
+shader = ExtResource("5_2tchf")
+shader_parameter/value = 0.115
+
+[node name="Tree" type="Node2D"]
+
+[node name="Tree" type="Sprite2D" parent="."]
+z_index = -100
+z_as_relative = false
+position = Vector2(0, -267)
+texture = ExtResource("1_bwkih")
+
+[node name="Miexer" parent="." instance=ExtResource("2_h8lxt")]
+position = Vector2(-169, -185)
+
+[node name="Apple" parent="." instance=ExtResource("3_g4u4w")]
+position = Vector2(-93, -144)
+rotation = -2.26445
+
+[node name="Bottle" parent="." instance=ExtResource("4_gfu61")]
+position = Vector2(-5, -237)
+filled_mat = SubResource("ShaderMaterial_k1les")

@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cxd6p5gdqevd3"]
+
+[ext_resource type="FontFile" uid="uid://byvfp7v2a7ld6" path="res://art/ui/Roboto_Mono/static/RobotoMono-Bold.ttf" id="1_2ob3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inoi4"]
+bg_color = Color(1, 0.8, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7loxd"]
+bg_color = Color(0.79002, 0.629826, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 100
+Button/fonts/font = ExtResource("1_2ob3c")
+Button/styles/disabled = SubResource("StyleBoxFlat_inoi4")
+Button/styles/hover = SubResource("StyleBoxFlat_7loxd")
+Button/styles/normal = SubResource("StyleBoxFlat_inoi4")
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_2ob3c")

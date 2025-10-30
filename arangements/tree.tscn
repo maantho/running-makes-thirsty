@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dooiwtqtf2h04"]
+
+[ext_resource type="Texture2D" uid="uid://itrpcp2gq3h4" path="res://art/tree.svg" id="1_dhg4u"]
+[ext_resource type="PackedScene" uid="uid://7yph1pddbqi4" path="res://objects/scenes/apple.tscn" id="2_qtbgk"]
+
+[node name="Tree" type="Node2D"]
+
+[node name="Tree" type="Sprite2D" parent="."]
+z_index = -100
+z_as_relative = false
+position = Vector2(0, -274)
+texture = ExtResource("1_dhg4u")
+
+[node name="Apple" parent="." instance=ExtResource("2_qtbgk")]
+position = Vector2(108, -369)
+
+[node name="Apple2" parent="." instance=ExtResource("2_qtbgk")]
+position = Vector2(-80, -311)
+
+[node name="Apple3" parent="." instance=ExtResource("2_qtbgk")]
+position = Vector2(-30, -448)

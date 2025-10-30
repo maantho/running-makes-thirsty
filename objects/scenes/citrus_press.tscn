@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccgm7yyq6jodq"]
+
+[ext_resource type="Script" uid="uid://ccxydyqwx2vvv" path="res://objects/Processer.gd" id="1_c47ie"]
+[ext_resource type="Texture2D" uid="uid://1srriqgpcpsh" path="res://art/citrusPress.svg" id="2_3kyi8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3vng"]
+radius = 43.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbpbs"]
+radius = 59.0
+height = 248.0
+
+[node name="CitrusPress" type="RigidBody2D" node_paths=PackedStringArray("filling_bottle_remote", "emptying_food_remote")]
+script = ExtResource("1_c47ie")
+type = 1
+speed = 25.0
+filling_bottle_remote = NodePath("Fill")
+emptying_food_remote = NodePath("Emty")
+base_weight = 100.0
+
+[node name="CitrusPress" type="Sprite2D" parent="."]
+texture = ExtResource("2_3kyi8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_i3vng")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 6)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 17)
+shape = SubResource("CapsuleShape2D_vbpbs")
+
+[node name="Emty" type="RemoteTransform2D" parent="."]
+position = Vector2(0, -43)
+update_scale = false
+
+[node name="Fill" type="RemoteTransform2D" parent="."]
+position = Vector2(-1, 40)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

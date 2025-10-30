@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://wxs5i0xsbo2d"]
+
+[ext_resource type="Texture2D" uid="uid://d1esmafdmttxq" path="res://art/house.svg" id="1_n1qn2"]
+[ext_resource type="PackedScene" uid="uid://ccgm7yyq6jodq" path="res://objects/scenes/citrus_press.tscn" id="2_gket7"]
+[ext_resource type="PackedScene" uid="uid://dcpdgxkxxemnt" path="res://objects/scenes/lemon.tscn" id="3_ey722"]
+[ext_resource type="PackedScene" uid="uid://bm83230ncrkqo" path="res://objects/scenes/alk_bottle.tscn" id="4_6kujp"]
+[ext_resource type="Shader" uid="uid://dvviuwtiycssu" path="res://objects/scenes/bottle.gdshader" id="5_6eget"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unvq3"]
+resource_local_to_scene = true
+shader = ExtResource("5_6eget")
+shader_parameter/value = 0.635
+
+[node name="Tree" type="Node2D"]
+
+[node name="Tree" type="Sprite2D" parent="."]
+z_index = -100
+z_as_relative = false
+position = Vector2(0, -267)
+texture = ExtResource("1_n1qn2")
+
+[node name="CitrusPress" parent="." instance=ExtResource("2_gket7")]
+position = Vector2(-169, -151)
+rotation = 2.47934
+
+[node name="Lemon" parent="." instance=ExtResource("3_ey722")]
+position = Vector2(-91, -147)
+rotation = -0.739768
+
+[node name="Alk_bottle" parent="." instance=ExtResource("4_6kujp")]
+position = Vector2(-1, -238)
+filled_mat = SubResource("ShaderMaterial_unvq3")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhgq4q134ixgi"]
+
+[ext_resource type="Theme" uid="uid://cxd6p5gdqevd3" path="res://art/ui/standard.tres" id="1_bwmmc"]
+[ext_resource type="Script" uid="uid://fj7afj8lvwjx" path="res://menu/main_menu.gd" id="2_0j3ha"]
+[ext_resource type="Texture2D" uid="uid://d27a082nhap70" path="res://menu/title.svg" id="3_grynw"]
+
+[node name="GameOverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bwmmc")
+script = ExtResource("2_0j3ha")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -123.5
+offset_right = 145.0
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_grynw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 480.0
+offset_right = 1687.0
+offset_bottom = 763.0
+theme_override_colors/font_color = Color(0.372549, 0.737255, 0.827451, 1)
+theme_override_font_sizes/font_size = 85
+text = "Running makes 
+thirsty"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1228.0
+offset_top = 801.0
+offset_right = 1592.0
+offset_bottom = 947.0
+text = "Play
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
