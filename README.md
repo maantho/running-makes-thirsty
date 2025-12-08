@@ -7,4 +7,4 @@ It features a fun mechanic, where the player has to produce enough water to hydr
 
 Play the game: https://antonystinson.itch.io/running-makes-thirsty
 
-<img src="gameplay.png" alt="Screeenshot of the game">
+<img src="gameplay.gif" alt="Screencapture of the game">
